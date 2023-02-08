@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    list<int> mylist;
+    int n;
+    cin>>n;
+    int data;
+
+    for(int i=0;i<n;i++)
+    {
+        cin>>data;
+        mylist.push_back(data);
+    }
+    set<int> set;
+    for(list<int>::iterator head=mylist.begin();head!=mylist.end();head++)
+    {
+        set.insert(*head);
+    }
+    
+    for(auto it=set.begin();it!=set.end();it++)
+    {
+        cout<<*it<<"-->";
+    }
+}
